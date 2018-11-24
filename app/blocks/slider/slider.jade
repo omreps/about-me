@@ -1,0 +1,19 @@
+mixin slider(pos)
+	+b.slidercontainer
+		+e('input').slider(type="range" min="0" max="3000")
+		+b.underline
+		+b.ticks
+			+e('span').left_left
+			+e('span').left_center
+			+e('span').right_center
+			+e('span').right_right
+		+b.txts
+			+e('span').first
+				| Не владею
+			+e('span').second
+				| Использую готовые решения
+			+e('span').third_left
+				| Использую готовые решения
+				| и умею их переделывать
+			+e('span').third_right
+				| Пишу сложный JS с нуля

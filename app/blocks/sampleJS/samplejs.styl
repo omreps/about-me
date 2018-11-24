@@ -1,0 +1,100 @@
+.stageJS
+    display none
+    &_hide
+        display none
+    &_show
+        display block
+    .areaJS
+        position relative
+        width 100%
+        height 520px
+        background url(/assets/map.png) no-repeat center
+        margin-top 23px
+        .map
+        	+from-width(980px)
+                width 735px
+                margin auto
+                &__mens
+                    position relative
+                    width 100%
+                    li 
+                        position absolute
+                        width 25px
+                        height 60px
+                        background url(/assets/man_white.png) no-repeat 0 0
+                        background-size 100% 100%
+                        -webkit-transition background-image ease-out 0.3s
+                        z-index 5
+                        &:nth-child(1) 
+                            top 180px
+                            left 120px
+                        &:nth-child(2) 
+                            top 225px
+                            left 265px
+                        &:nth-child(3) 
+                            top 295px
+                            left 240px
+                        &:nth-child(4) 
+                            top 350px
+                            left 330px
+                        &:nth-child(5) 
+                            top 185px
+                            left 390px
+                        &:nth-child(6) 
+                            top 240px
+                            left 490px
+                        &:nth-child(7) 
+                            top 190px
+                            left 565px
+                        &:nth-child(8) 
+                            top 310px
+                            left 440px
+                        &:nth-child(9) 
+                            top 115px
+                            left 615px
+                        &.red 
+                            &.yellow 
+                                background-image url(/assets/man_red.png)
+                                z-index 100
+.drag_red_wrapper
+	+from-width(980px)
+        position absolute
+        top 90px
+        width 100%
+        height 380px
+        z-index 6
+.drag_red
+	+from-width(980px)
+        width 100%
+        height 107px
+        background -webkit-linear-gradient(left, rgba(237,28,36,1) 0%,rgba(237,28,36,1) 2%,rgba(237,28,36,0.5) 48%,rgba(237,28,36,0.05) 100%)
+        color #ffffff
+        -webkit-box-align center
+        padding-left 15px
+        cursor grab
+.drag_yellow_wrapper
+	+from-width(980px)
+        position absolute
+        top 0
+        left 20%
+        width 80%
+        height 520px
+        z-index 7
+.drag_yellow
+	+from-width(980px)
+        width 256px
+        height 510px
+        background -webkit-linear-gradient(top, rgba(255,242,0,1) 0%,rgba(255,242,0,1) 9%,rgba(255,242,0,0.5) 25%,rgba(255,242,0,0.05) 100%)
+        color #58595b
+        -webkit-box-pack center
+        position absolute
+        padding-top 10px
+        cursor grab
+.drag_red,
+.drag_yellow
+    position absolute
+    top 0
+    left 0
+    display -webkit-box
+    font-size 18px
+    line-height 22px

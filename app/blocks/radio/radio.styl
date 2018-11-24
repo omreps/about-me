@@ -1,0 +1,37 @@
+.radiocontainer
+	position relative
+	top 22px
+	right 8px
+	height 119px
+	white-space nowrap
+	+mobile()
+		height 219px
+	+from-width(901px)
+		display flex
+		justify-content flex-start
+		flex-wrap wrap
+	.radio
+		+mobile()
+			height 40px
+		&__txt
+			font-size 21px
+			font-family "PTSans"
+			color rgb(0, 0, 0)
+			font-weight bold
+			position relative
+			line-height 31px
+			right 3px
+			bottom 1px
+			display table-cell
+		&__label
+			background transparent
+			background-repeat no-repeat
+			background-position center left
+			width 44px
+			display table-cell
+			&_checked
+				background-image url(/assets/radio_checked.png)
+			&_unchecked
+				background-image url(/assets/radio_unchecked.png)
+		&__input
+			display none

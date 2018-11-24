@@ -1,0 +1,56 @@
+include ../content/content
+include ../container/container
+include ../subtitle/subtitle
+include ../heading/heading
+include ../description/description
+include ../checkbox/checkbox
+include ../radio/radio
+include ../list/list
+include ../arrow/arrow
+include ../fork/fork
+include ../table/table
+include ../slider/slider
+include ../myworks/myworks
+include ../modal/modal
+include ../sampleJS/samplejs
+include ../sampleCanvas/samplecanvas
+include ../sampleSVG/samplesvg
+
+mixin index()
+	+b.index
+		+content()
+			.index__group
+				+list('general_info')
+			.index__group
+				+heading()
+					| Обо мне
+				+description()
+					| Скилл без галочки означает, что это направление - один из моих ближайших приоритетов
+				+table('skills')
+				+heading()
+					| Мой уровень владения JavaScript
+				+description()
+					| Неравномерный слайдер полностью функционален
+				+slider(2)
+				+heading()
+					| Немного о себе словами
+				+description()
+					| Как-то так
+				+list('about')
+				+heading()
+					| Планы на будущее?
+				+description()
+					| Как я их вижу на текущий момент
+				br
+				+radio('plans')
+				+heading()
+					| Примерчики на JS
+				+description()
+					| Кликабельны
+				+myworks()
+				+field("Дата заполнения", "24.11.2018", "true")
+				+modal
+					+sampleJS
+					+sampleCanvas
+					+sampleSVG
+			+fork()

@@ -1,0 +1,123 @@
+import test from 'ava';
+import {
+	getSliderTickPos,
+	SLIDER_LEN,
+	SECOND_TICK_COEF,
+	THIRD_TICK_COEF}from './sliderticks.js';
+
+test('It gets Fixed Slider Pos from 0 position value', async t => {
+	const testVal = 0;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, 0);
+});
+
+test('It gets Fixed Slider Pos from -1 position value', async t => {
+	const testVal = -10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, 0);
+});
+
+test('It gets Fixed Slider Pos from 0xFFFF position value', async t => {
+	const testVal = 0xFFFF;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN);
+});
+
+test('It gets Fixed Slider Pos befor SECOND TICK position value', async t => {
+	const testVal = SLIDER_LEN * SECOND_TICK_COEF - 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN * SECOND_TICK_COEF);
+});
+
+test('It gets Fixed Slider Pos after SECOND TICK position value', async t => {
+	const testVal = SLIDER_LEN * SECOND_TICK_COEF + 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN * SECOND_TICK_COEF);
+});
+
+test('It gets Fixed Slider Pos befor THIRD TICK position value', async t => {
+	const testVal = SLIDER_LEN * THIRD_TICK_COEF - 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN * THIRD_TICK_COEF);
+});
+
+test('It gets Fixed Slider Pos after THIRD TICK position value', async t => {
+	const testVal = SLIDER_LEN * THIRD_TICK_COEF + 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN * THIRD_TICK_COEF);
+});
+
+test('It gets Fixed Slider Pos befor SLIDER_LEN position value', async t => {
+	const testVal = SLIDER_LEN - 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, SLIDER_LEN);
+});
+
+test('It gets Fixed Slider Pos after 0 position value', async t => {
+	const testVal = 10;
+
+	const result = Promise.resolve(getSliderTickPos(
+		testVal,
+		SLIDER_LEN,
+		SLIDER_LEN * SECOND_TICK_COEF,
+		SLIDER_LEN * THIRD_TICK_COEF
+	));
+
+	t.is(await result, 0);
+});

@@ -1,0 +1,82 @@
+.stageCanvas
+    display none
+    &_hide
+        display none
+    &_show
+        display block
+    height 560px
+    margin auto
+    .areaCanvas
+        position relative
+        width 544px
+        height 544px
+        background url(/assets/clock.png) no-repeat center center
+        margin auto
+        z-index 10
+        &__canvas
+            position relative
+            top 0
+            left 0
+            width 544px
+            height 544px
+        .arrowBox
+            position relative
+            margin-top -272px
+            margin-left 264px
+            width 24px
+            height 24px
+            background #d1d3d4
+            -webkit-border-radius 50%
+            border-radius 50%
+            z-index 3
+        .arrHour,
+        .arrMinute
+            position absolute
+            background #d1d3d4
+        .arrHour
+            top 2px
+            right 12px
+            width 96px
+            height 20px
+            -webkit-border-radius 10px
+            border-radius 10px
+            -webkit-transform-origin 100% 50%
+    .active
+        .arrHour
+            animation-name 'rotation2'
+            animation-duration 7.8s
+            animation-timing-function linear
+            animation-iteration-count 1
+            -webkit-transform rotate3d(0, 0, 1, 90deg)
+            -webkit-animation-name rotation2
+            -webkit-animation-duration 7.8s
+            -webkit-animation-timing-function linear
+            -webkit-animation-iteration-count 1
+            @keyframes rotation2 {
+                0%      { -webkit-transform: rotate(0deg) }
+                80%     { -webkit-transform: rotate(360deg) }
+                100%    { -webkit-transform: rotate(450deg) }
+            }
+        .arrMinute
+            opacity 0.3
+            -webkit-animation-name rotation1
+            -webkit-animation-duration 0.5s
+            -webkit-animation-timing-function linear
+            -webkit-animation-iteration-count 15
+            @keyframes rotation1 {
+                0%     { -webkit-transform: rotate(0deg); }
+                100%   { -webkit-transform: rotate(360deg); }  
+            }	
+    .arrMinute
+        bottom 12px
+        left 6px
+        width 12px
+        height 114px
+        -webkit-border-radius 6px
+        border-radius 6px
+        -webkit-transform-origin 50% 100%
+        -webkit-transform-style preserve-3d
+    .active
+        &.stop
+            .arrMinute
+                opacity 1

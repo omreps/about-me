@@ -1,0 +1,9 @@
+mixin radio(name)
+	- let list = getData(name+'.json');
+	+b.radiocontainer
+		each item, index in list
+			+b.radio
+				+e('label').label(class = (item[1] == "true"? "_checked" : "_unchecked") class = "_#{index}" for="radio_input_#{index}")
+					+e('input').input(class = "radio_input" type = "radio" name = "plans" checked = item[1] id="radio_input_#{index}")
+				+e('span').txt
+					|#{item[0]}&nbsp;

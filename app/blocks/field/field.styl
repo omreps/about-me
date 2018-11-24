@@ -1,0 +1,54 @@
+.field
+	+from-width(901px)
+		height 60px
+	&_has_description
+		+from-width(901px)
+			height 61.5px
+	&__txt
+		font-size 22px
+		font-family "PTSans"
+		color rgb(47, 27, 21)
+		font-weight bold
+		display table-cell
+		white-space nowrap
+		padding-right 1px
+		position relative
+		top 14px
+		+from-width(901px)
+			display table-cell
+		&_has_description
+			padding-right 15px
+			+mobile()
+				padding-bottom 10px
+	&__inblock
+		+from-width(901px)
+			display table-cell
+		width 207px
+		&_wide
+			width 100%
+	&__info
+		border 0
+		outline 0
+		background transparent
+		background-image url(/assets/underline.png)
+		background-repeat no-repeat
+		background-position bottom right
+		background-size cover
+		font-size 22px
+		font-family "Courier New"
+		color rgb(35, 31, 32)
+		height 55px
+		padding 13px 0px 0px 0px
+		width 136px
+		+from-width(770px)
+			width 185px
+			font-size 30px
+		+from-width(901px)
+			width 209px
+		&_wide
+			width 100%
+		&_has_description
+			+from-width(901px)
+				padding 0px 15px 0px
+	&::selection
+		background-color rgba(0, 0, 0, .1)

@@ -1,0 +1,5 @@
+mixin field(name, value, fitletters)
+	+b.field(class = (name != ""? "_has_description":""))
+		+e('span').txt(class = (name != ""? "_has_description":"")) #{name}
+		+e('span').inblock(class = (fitletters == "true"? "":"_wide"))
+			+e('input').info(value='#{value}' class = (name != ""? "_has_description":"") class = (fitletters == "true"? "":"_wide"))

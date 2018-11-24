@@ -1,0 +1,9 @@
+include ../field/field
+
+mixin list(name)
+	- let list = getData(name+'.json');
+	+b.list(class = '#{name}')
+		+b('ul').ul
+			each item in list
+				+e('li').item
+					+field(item[0], item[1])

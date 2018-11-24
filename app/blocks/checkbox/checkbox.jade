@@ -1,0 +1,8 @@
+mixin checkbox(index, value, name, url)
+	+b.checkbox
+		+e('label').label(class = (value == "true"? "_checked" : "_unchecked") for="checkbox_input_#{index}")
+			+e('input').input(type="checkbox" checked = (value == "true"? true : false) value id="checkbox_input_#{index}")
+		+e('span').txt
+			|#{name}
+			if(url != undefined)			
+				a(href="http://"+"#{url}") #{url}

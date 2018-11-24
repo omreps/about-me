@@ -1,0 +1,41 @@
+.header
+	height 279px
+	position relative
+	+mobile()
+		height 429px
+	&__case
+		position absolute
+		top 154px
+		width 221px
+		height 118px
+		+mobile()
+			top 300px
+			left 48%
+			transform translate(-50%, 0)
+		+from-width(801px)
+			left 48%
+			transform translate(-50%, 0)
+	&__stamp
+		position absolute
+		width 252px
+		height 106px
+		+from-width(901px)
+			top 48px
+			left 82%
+			transform translate(-50%, 0)
+		+mobile()
+			top 62px
+			left 50%
+			transform translate(-50%, 0)
+	&__logo
+		position absolute
+		top 62px
+		width 154px
+		height 52px
+		+from-width(901px)
+			left 19%
+			transform translate(-50%, 0)
+		+mobile()
+			top 220px
+			left 50%
+			transform translate(-50%, 0)

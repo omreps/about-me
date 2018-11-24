@@ -1,0 +1,19 @@
+[
+	["БЭМ", "true"],
+	["Pug (Jade)", "true"],
+	["Stylus", "true"],
+	["Верстаю семантично", "true"],
+	["Pixel Perfect", "true"],
+	["ES2015/ES2016", "true"],
+	["jQuery", "true"],
+	["Работаю с SVG", "true"],	
+	["Анимация CSS/Canvas", "true"],
+	["Unit/Selenium tests", "true"],
+	["React", "false"],
+	["Webpack", "true"],
+	["Node.js", "true"],
+	["Использую Git", "true"],
+	["Читаю о Frontend dev", "true"],
+	["Имею ООП-бэкграунд", "true"],
+	["Английский Upper Intermediate", "false"]
+]
