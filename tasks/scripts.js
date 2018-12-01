@@ -26,7 +26,7 @@ function runWebpack(watch = false) {
 			}
 			statsLogger(error, stats);
 
-			// solve the issue https://github.com/CSSSR/csssr-project-template/issues/169
+
 			if (watch === false) {
 				callback();
 			}
