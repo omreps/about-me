@@ -1,4 +1,4 @@
-![Screenshot](dist/topsecret.jpg)
+Make my personal Top Secret Case on Webpack + Gulp + PUG(Jade) + Stylus + BEM + jQuery
+Live version: [www.vh152449.eurodir.ru/about-me](http://vh152449.eurodir.ru/about-me)
 
-Webpack+Gulp+PUG+Stylus+BEM: Learning in a fun way - creating my personal Top Secret Case
-[http://vh152449.eurodir.ru/about-me](http://vh152449.eurodir.ru/about-me)
+![Screenshot](dist/topsecret.jpg)
